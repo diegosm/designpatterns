@@ -1,0 +1,33 @@
+{
+  "name": "diegosm/designpatterns",
+  "description": "Design Patterns Using PHP",
+  "type": "project",
+  "license": "FREE",
+  "authors": [
+    {
+      "name": "Diego Mota",
+      "email": "diego.smota@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.3",
+    "squizlabs/php_codesniffer": "^3.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "DesignPatterns\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "phpcs": "./vendor/bin/phpcs",
+    "test": "./vendor/bin/phpunit"
+  }
+}
