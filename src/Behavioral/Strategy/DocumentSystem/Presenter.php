@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DesignPatterns\Behavioral\Strategy\DocumentPrinter;
+namespace DesignPatterns\Behavioral\Strategy\DocumentSystem;
 
 interface Presenter
 {

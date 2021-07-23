@@ -2,28 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Tests\Behavioral\Strategy\DocumentPrinter;
+namespace Tests\Behavioral\Strategy\DocumentSystem;
 
-use DesignPatterns\Behavioral\Strategy\DocumentPrinter\Document;
-use DesignPatterns\Behavioral\Strategy\DocumentPrinter\DocumentConcrete;
-use DesignPatterns\Behavioral\Strategy\DocumentPrinter\DocumentDisplay;
-use DesignPatterns\Behavioral\Strategy\DocumentPrinter\HTMLPresenter;
-use DesignPatterns\Behavioral\Strategy\DocumentPrinter\Presenter;
-use DesignPatterns\Behavioral\Strategy\DocumentPrinter\XMLPresenter;
+use DesignPatterns\Behavioral\Strategy\DocumentSystem\Document;
+use DesignPatterns\Behavioral\Strategy\DocumentSystem\DocumentConcrete;
+use DesignPatterns\Behavioral\Strategy\DocumentSystem\DocumentDisplay;
+use DesignPatterns\Behavioral\Strategy\DocumentSystem\HTMLPresenter;
+use DesignPatterns\Behavioral\Strategy\DocumentSystem\XMLPresenter;
 use PHPUnit\Framework\TestCase;
 
 class DocumentDisplayTest extends TestCase
 {
-    public function testShouldHaveDocumentOutput()
-    {
-        $document = $this->createMock(Document::class);
-        $presenter = $this->createMock(Presenter::class);
-
-        $display   = new DocumentDisplay($document, $presenter);
-
-        $this->assertInstanceOf(DocumentDisplay::class, $display);
-    }
-
     public function testShouldPrintInHTMLFormat()
     {
         $display = new DocumentDisplay(
